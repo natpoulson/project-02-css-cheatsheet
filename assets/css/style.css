@@ -1,0 +1,28 @@
+:root {
+    --background-primary: #DDD;
+    --background-secondary: #66C;
+    --foreground-primary: #3C3C3C;
+}
+
+/* Enable Flex on the body and the containing element of our Flexbox elements */
+body, main {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Set page background and flex direction to column */
+body {
+    background-color: var(--background-primary);
+    flex-direction: column;
+}
+
+/* Enforce wrapping of CSS snippet blocks */
+main {
+    flex-wrap: wrap;
+}
+
+/* Set snippet blocks to not shrink, grow, base width 1/3rd of page. Prime for absolutely-positioned items */
+article {
+    flex: 0 1 33%;
+    position: relative;
+}
