@@ -4,10 +4,19 @@
     --foreground-primary: #3C3C3C;
 }
 
+/* Centre text in the header and footer regions as opposed to centring with flex */
+header, footer {
+    text-align: center;
+    margin: 2rem;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
 /* Enable Flex on the body and the containing element of our Flexbox elements */
 body, main {
     display: flex;
-    justify-content: space-between;
 }
 
 /* Set page background and flex direction to column */
@@ -19,10 +28,37 @@ body {
 /* Enforce wrapping of CSS snippet blocks */
 main {
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Set snippet blocks to not shrink, grow, base width 1/3rd of page. Prime for absolutely-positioned items */
 article {
-    flex: 0 1 33%;
+    box-sizing: border-box;
+    padding: 0 1rem 1rem 1rem;
+    flex: 0 0 30%;
     position: relative;
+    border: dashed 2px var(--foreground-primary);
+    margin: 1rem;
+}
+
+/* Create a floating header over the info cards */
+article h2 {
+    display: relative;
+    background-color: var(--background-primary);
+    margin-top: -20px;
+    padding: 0 0.3rem;
+    border: solid 2px var(--foreground-primary);
+    border-radius: 5px;
+}
+
+article p, article code {
+    font-size: 10pt;
+}
+
+article p {
+    padding: 0.5rem 0;
+}
+
+article code {
+    font-family: 'Courier New', Courier, monospace;
 }
