@@ -1,6 +1,6 @@
 :root {
     --background-primary: #DDD;
-    --background-secondary: #66C;
+    --background-secondary: #ABC;
     --foreground-primary: #3C3C3C;
 }
 
@@ -35,7 +35,7 @@ main {
 article {
     box-sizing: border-box;
     padding: 0 1rem 1rem 1rem;
-    flex: 0 0 30%;
+    flex: 1 1 30%;
     position: relative;
     border: dashed 2px var(--foreground-primary);
     margin: 1rem;
@@ -61,4 +61,14 @@ article p {
 
 article code {
     font-family: 'Courier New', Courier, monospace;
+}
+
+pre {
+    background-image: linear-gradient(#DDD, #ABC);
+}
+
+@media screen and (max-width: 768px) {
+    article {
+        flex-basis: 90%;
+    }
 }
